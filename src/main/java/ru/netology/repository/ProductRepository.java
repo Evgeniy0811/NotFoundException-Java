@@ -30,4 +30,13 @@ public class ProductRepository {
         }
         items = tmp;
     }
+
+    public Product findById(int id) {
+        for (Product item : items) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        return null;
+    }
 }
